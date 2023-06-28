@@ -2,6 +2,7 @@
 class Alumnos extends Personas {
     constructor(newNombre, newEdad, newSexo, newCalificacion) {
         super(newNombre, newEdad, newSexo);
+        this.disponible = Math.random() > 0.2;
         this.calificacion = this.comprobarNota(newCalificacion);
     }
     comprobarNota(calificacion) {

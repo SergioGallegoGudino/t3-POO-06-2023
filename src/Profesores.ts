@@ -2,11 +2,13 @@ type tipMateria = 'matematicas' | 'filosofia' | 'fisica';
 
 class Profesores extends Personas {
     // Atributos
+    private disponible: boolean;
     private materia: string;
     // Constructor
     constructor(nombre: string, edad: number, sexo: tipSexo, newMateria: tipMateria) {
         super(nombre, edad, sexo);
         this.materia = newMateria;
+        this.disponible = Math.random() > 0.2;
     }
     // Métodos
     get getMateria(){
@@ -16,7 +18,7 @@ class Profesores extends Personas {
         return this.disponible;
     }
     comprobarDisponibilidad() {
-        this.disponible = Math.random() > 0.2;
+        
         return this.disponible;
     }
 }

@@ -5,6 +5,5 @@ class Personas {
         this.nombre = newNombre;
         this.edad = newEdad;
         this.sexo = newSexo;
-        this.disponible = true;
     }
 }
