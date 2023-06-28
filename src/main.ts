@@ -10,7 +10,12 @@ let estudiante9 = new Alumnos ("Maribel", 15, "M", 4);
 let estudiante10 = new Alumnos ("Manolo", 14, "M", 8);
 let estudiante11 = new Alumnos ("Juana", 13, "M", 12);
 
-let prof1 = new Profesores ("Hildero", 46, "H","física");
-let prof2 = new Profesores ("Luisa", 25, "H","física");
-let prof3 = new Profesores ("Galia", 35, "H","filosofía");
-let prof4 = new Profesores ("Vico", 60, "H","matemáticas");
+let prof1 = new Profesores ("Hildero", 46, "H","fisica");
+let prof2 = new Profesores ("Luisa", 25, "H","fisica");
+let prof3 = new Profesores ("Galia", 35, "H","filosofia");
+let prof4 = new Profesores ("Vico", 60, "H","matematicas");
+
+
+
+let aula1 = new Aulas (1, 6, "matematicas", a1, prof4);
+let aula2 = new Aulas (2, 6, "filosofia", a1, prof3);
