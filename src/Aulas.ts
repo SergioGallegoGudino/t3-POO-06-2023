@@ -24,6 +24,14 @@ class Aulas{
         
     }
 
+    get getProfesor(): Profesores | null{
+        return this.profesor;
+    }
+
+    get getAlumnos(): Alumnos[] | null{
+        return this.alumnos;
+    }
+
     aprovados(){
         let contM = 0;
         let contH = 0;
@@ -43,6 +51,7 @@ class Aulas{
         console.log(`Alumnos aprovados = ${contH}`);
         }
     }
+    
 }
 
 const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number) => {
