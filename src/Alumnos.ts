@@ -8,14 +8,14 @@ class Alumnos extends Personas{
     }
 
     comprobarDisponibilidad(): void{
-        this.disponible = 
+        this.disponible = Math.random() > 0.5;
     }
     
-    get disponibildiad(): boolean {
+    get getDisponibilidad(): boolean {
         return this.disponible;
     }
     
-    get nota(): number {
+    get getCalificacion(): number {
         return this.calificacion;
     }
 
