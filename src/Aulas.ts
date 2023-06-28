@@ -21,8 +21,7 @@ class Aulas{
             this.profesor = profesor;
         else 
             this.profesor = null;
-        
-    }
+        }
 
     get getProfesor(): Profesores | null{
         return this.profesor;

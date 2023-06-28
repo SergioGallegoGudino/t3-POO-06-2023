@@ -18,7 +18,6 @@ class Profesores extends Personas {
         return this.disponible;
     }
     comprobarDisponibilidad() {
-        
         return this.disponible;
     }
 }

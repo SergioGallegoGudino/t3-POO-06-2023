@@ -5,7 +5,7 @@ class Alumnos extends Personas{
 
     constructor(newNombre:string, newEdad:number, newSexo:tipSexo, newCalificacion:number){
         super(newNombre, newEdad, newSexo);
-        this.disponible = Math.random() > 0.2;
+        this.disponible = Math.random() > 0.5;
         this.calificacion = this.comprobarNota(newCalificacion);
     }
 
@@ -15,10 +15,6 @@ class Alumnos extends Personas{
         } else{
             return calificacion;
         }
-    }
-
-    comprobarDisponibilidad(): void{
-        this.disponible = Math.random() > 0.5;
     }
 
     get getDisponible(): boolean {
