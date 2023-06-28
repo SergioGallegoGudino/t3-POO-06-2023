@@ -34,6 +34,10 @@ assignarDisponibilidad(p1);
 let aula1 = new Aulas (1, 6, "matematicas", a1, prof4);
 let aula2 = new Aulas (2, 6, "filosofia", a1, prof3);
 
+console.log("a");
+console.log(a2);
+console.log(p1);
+
 if(aula1.getAlumnos == null || aula1.getProfesor == null){
     console.log("No pueden impartir clases.");
 } else{
