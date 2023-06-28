@@ -11,7 +11,7 @@ class Alumnos extends Personas{
         this.disponible = Math.random() > 0.5;
     }
     
-    get getDisponibilidad(): boolean {
+    get getDisponible(): boolean {
         return this.disponible;
     }
     
