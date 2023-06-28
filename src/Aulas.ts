@@ -1,4 +1,4 @@
-type materia = "matematicas" | "fisolosfia" | "fisica";
+type materia = "matematicas" | "filosofia" | "fisica";
 
 class Aulas{
     private id: number;

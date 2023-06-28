@@ -1,4 +1,4 @@
-type tipMateria = 'matemáticas' | 'filosofía' | 'física';
+type tipMateria = 'matematicas' | 'filosofia' | 'fisica';
 
 class Profesores extends Personas {
     // Atributos
