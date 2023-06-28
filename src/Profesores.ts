@@ -1,6 +1,6 @@
 type tipMateria = 'matemáticas' | 'filosofía' | 'física';
 
-class Profesor extends Personas {
+class Profesores extends Personas {
     // Atributos
     private materia: string;
     // Constructor

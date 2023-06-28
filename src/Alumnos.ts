@@ -27,4 +27,8 @@ class Alumnos extends Personas{
         return this.calificacion;
     }
 
+    get getSexo(): tipSexo {
+        return this.sexo;
+    }
+
 }
