@@ -4,7 +4,15 @@ class Alumnos extends Personas{
 
     constructor(newNombre:string, newEdad:number, newSexo:tipSexo, newCalificacion:number, ){
         super(newNombre, newEdad, newSexo);
-        this.calificacion = newCalificacion;
+        this.calificacion = this.comprobarNota(newCalificacion);
+    }
+
+    comprobarNota(calificacion:number): number{
+        if(calificacion > 10 || calificacion < 0){
+            return 0;
+        } else{
+            return calificacion;
+        }
     }
 
     comprobarDisponibilidad(): void{
