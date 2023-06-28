@@ -1,0 +1,11 @@
+let estudiante1 = new Alumnos ("Paco", 12, "H", 7);
+let estudiante2 = new Alumnos ("Enrique", 13, "H", 4);
+let estudiante3 = new Alumnos ("Anna", 16, "M", 9);
+let estudiante4 = new Alumnos ("", , "", );
+let estudiante5 = new Alumnos ("", , "", );
+let estudiante6 = new Alumnos ("", , "", );
+let estudiante7 = new Alumnos ("", , "", );
+let estudiante8 = new Alumnos ("", , "", );
+let estudiante9 = new Alumnos ("", , "", );
+let estudiante10 = new Alumnos ("", , "", );
+let estudiante11 = new Alumnos ("", , "", );

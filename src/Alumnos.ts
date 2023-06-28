@@ -18,7 +18,7 @@ class Alumnos extends Personas{
     comprobarDisponibilidad(): void{
         this.disponible = Math.random() > 0.5;
     }
-    
+
     get getDisponible(): boolean {
         return this.disponible;
     }
