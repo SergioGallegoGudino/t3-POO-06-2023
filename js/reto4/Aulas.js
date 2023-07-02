@@ -45,10 +45,10 @@ const comprovarDisponibilidadClasse = (alumnos, maxAlumnos) => {
         if (!alumnos[i].getDisponible)
             cont++;
     }
-    if (cont >= maxAlumnos / 2)
-        return true;
-    else
+    if (cont > maxAlumnos / 2)
         return false;
+    else
+        return true;
 };
 const comprovarProfesor = (profesor, materia) => {
     if (profesor.getMateria === materia && profesor.getDisponible)

@@ -35,7 +35,7 @@ class Aulas{
         let contM = 0;
         let contH = 0;
         if (this.alumnos == null || this.profesor == null){
-            return null
+            return null;
         } else{
             for (let i = 0; i < this.alumnos.length; i++){
                 if (this.alumnos[i].getSexo == 'H' && this.alumnos[i].getCalificacion >= 5){
@@ -60,10 +60,10 @@ const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number) =
             cont++;
     }
 
-    if (cont >= maxAlumnos/2)
-        return true;
-    else
+    if (cont > maxAlumnos/2)
         return false;
+    else
+        return true;
 }
 
 const comprovarProfesor = (profesor: Profesores, materia: materia) => {
