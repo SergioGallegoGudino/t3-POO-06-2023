@@ -28,5 +28,9 @@ class Alumnos extends Personas{
     get getSexo(): tipSexo {
         return this.sexo;
     }
+    
+    comprobarDisponibilidad() {
+        return this.disponible;
+    }
 
 }
