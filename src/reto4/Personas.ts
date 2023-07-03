@@ -1,6 +1,6 @@
 type tipSexo = 'H' | 'M';
 
-class Personas {
+abstract class Personas {
     //Atributos
     protected nombre: string;
     protected edad: number;
