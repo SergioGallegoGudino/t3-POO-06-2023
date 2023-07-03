@@ -4,7 +4,6 @@ class Profesores extends Personas {
     constructor(nombre, edad, sexo, newMateria) {
         super(nombre, edad, sexo);
         this.materia = newMateria;
-        this.disponible = true;
     }
     // Métodos
     get getMateria() {

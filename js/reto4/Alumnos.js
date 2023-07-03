@@ -2,7 +2,6 @@
 class Alumnos extends Personas {
     constructor(newNombre, newEdad, newSexo, newCalificacion) {
         super(newNombre, newEdad, newSexo);
-        this.disponible = true;
         this.calificacion = this.comprobarNota(newCalificacion);
     }
     comprobarNota(calificacion) {
