@@ -18,28 +18,44 @@ let prof4 = new Profesores ("Vico", 60, "H", "matematicas");
 let a1 = [estudiante1, estudiante2, estudiante3, estudiante4, estudiante5, estudiante6];
 let a2 = [estudiante10, estudiante11, estudiante9, estudiante8, estudiante7, estudiante6];
 
-let aula1 = new Aulas (1, 6, "matematicas", a1, prof4);
-let aula2 = new Aulas (2, 6, "filosofia", a1, prof3);
-
 let p1 = [prof1, prof2, prof3, prof4];
 
-// const assignarDisponibilidad = (a: Alumnos[] | Profesores[]) => {
-//     for(let i = 0; i < a.length; i++){
-//         a[i].comprobarDisponibilidad();
-//     }
-// }
+const pasarLista = (a: Alumnos[] | Profesores[]) => {
+    for(let i = 0; i < a.length; i++){
+        a[i].pasarLista();
+    }
+}
 
-// assignarDisponibilidad(a1);
-// assignarDisponibilidad(a2);
-// assignarDisponibilidad(p1);
+pasarLista(a1);
+pasarLista(a2);
+pasarLista(p1);
 
+//
 console.log(a1);
 console.log(a2);
 console.log(p1);
 
-if(aula1.getAlumnos == null || aula1.getProfesor == null){
-    console.log("No pueden impartir clases.");
-} else{
-    console.log("Hay clases.");
-    aula1.aprovados();
+let aula1 = new Aulas (1, 6, "matematicas", a1, prof4);
+let aula2 = new Aulas (2, 6, "filosofia", a2, prof3);
+let aula3 = new Aulas (2, 6, "fisica", a2, prof4);
+
+const darClase = (aula: Aulas) => {
+    if(aula.getAlumnos == null || aula.getProfesor == null){
+        console.log("No pueden impartir clases.");
+    } else{
+        console.log("Hay clases.");
+        aula.aprovados();
+    }
 }
+
+console.log("\nAULA 1:");
+darClase(aula1);
+
+console.log("\n\nAULA 2:");
+darClase(aula2);
+
+console.log("\n\nAULA 3:");
+darClase(aula3);
+
+
+

@@ -23,7 +23,7 @@ class Aulas {
         let contM = 0;
         let contH = 0;
         if (this.alumnos == null || this.profesor == null) {
-            return null;
+            console.log(`Máximo de alumnos sobrepasado o profesor no coincide con la materia de la aula`);
         }
         else {
             for (let i = 0; i < this.alumnos.length; i++) {

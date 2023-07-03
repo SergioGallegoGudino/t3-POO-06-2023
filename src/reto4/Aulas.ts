@@ -31,11 +31,11 @@ class Aulas{
         return this.alumnos;
     }
 
-    aprovados(){
+    aprovados():void {
         let contM = 0;
         let contH = 0;
         if (this.alumnos == null || this.profesor == null){
-            return null;
+            console.log(`Máximo de alumnos sobrepasado o profesor no coincide con la materia de la aula`);
         } else{
             for (let i = 0; i < this.alumnos.length; i++){
                 if (this.alumnos[i].getSexo == 'H' && this.alumnos[i].getCalificacion >= 5){
@@ -53,7 +53,7 @@ class Aulas{
     
 }
 
-const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number) => {
+const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number): boolean => {
     let cont = 0;
     for (let i = 0; i < alumnos.length; i++){
         if (!alumnos[i].getDisponible)
@@ -66,7 +66,7 @@ const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number) =
         return true;
 }
 
-const comprovarProfesor = (profesor: Profesores, materia: materia) => {
+const comprovarProfesor = (profesor: Profesores, materia: materia): boolean => {
     if (profesor.getMateria === materia && profesor.getDisponible)
         return true;
     else

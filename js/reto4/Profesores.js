@@ -4,7 +4,7 @@ class Profesores extends Personas {
     constructor(nombre, edad, sexo, newMateria) {
         super(nombre, edad, sexo);
         this.materia = newMateria;
-        this.disponible = Math.random() > 0.2;
+        this.disponible = true;
     }
     // Métodos
     get getMateria() {
@@ -13,7 +13,8 @@ class Profesores extends Personas {
     get getDisponible() {
         return this.disponible;
     }
-    comprobarDisponibilidad() {
-        return this.disponible;
+    //metodo para asignar disponibilidad
+    pasarLista() {
+        this.disponible = Math.random() > 0.2;
     }
 }
