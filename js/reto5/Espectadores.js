@@ -5,4 +5,13 @@ class Espectadores {
         this.edad = newEdad;
         this.dinero = newDinero;
     }
+    get getEdad() {
+        return this.edad;
+    }
+    get getDinero() {
+        return this.dinero;
+    }
+    get getNombre() {
+        return this.nombre;
+    }
 }

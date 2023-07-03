@@ -6,4 +6,10 @@ class Peliculas {
         this.edadMinima = newEdadMinima;
         this.director = newDirector;
     }
+    get getTitulo() {
+        return this.titulo;
+    }
+    get getEdadMinima() {
+        return this.edadMinima;
+    }
 }
