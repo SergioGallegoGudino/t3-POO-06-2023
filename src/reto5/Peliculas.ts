@@ -1,3 +1,4 @@
+// Creamos una clase Peliculas con su constructor y sus getters
 class Peliculas{
     private titulo:string;
     private duracion:number;

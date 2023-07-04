@@ -1,3 +1,4 @@
+// Creamos la clase Espectadores con su constructor y sus getters
 class Espectadores{
     private nombre:string;
     private edad:number;

@@ -1,5 +1,6 @@
+// Creamos un tipo para las materiasa
 type tipMateria = 'matematicas' | 'filosofia' | 'fisica';
-
+// Creamos la classe Profesores que extiende de Personas, pasando los atributos de la superclase además del atributo materia
 class Profesores extends Personas {
     // Atributos
     private materia: string;

@@ -1,4 +1,5 @@
 "use strict";
+// Creamos una clase Peliculas con su constructor y sus getters
 class Peliculas {
     constructor(newTitulo, newDuracion, newEdadMinima, newDirector) {
         this.titulo = newTitulo;
