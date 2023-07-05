@@ -15,12 +15,14 @@ class Aulas{
         this.maxAlumnos = maxAlumnos;
         this.materia = materia;
         // Comprobamos que la cantidad de alumnos que hayan hecho novillos sea menor que la mitad de alumnos máximo, asignando el valor al atributo en caso negativo y devoliendo null en el positivo
-        if(comprovarDisponibilidadClasse(alumnos, maxAlumnos)) 
+        // Como parámetro pasamos el array de objetos alumnos para luego asignarlo al atributo, que todavía no ha sido instanciado
+        if(this.comprovarDisponibilidadClasse(alumnos)) 
             this.alumnos = alumnos;
         else 
             this.alumnos = null;
         // Comprobamos que el profesor se encuentre disponible e imparta la materia del aula, devolviendo el valor en caso positivo y null en caso negativo
-        if(comprovarProfesor(profesor, materia))
+        // Como parámetro pasamos el objeto profesor para luego asignarlo al atributo, que todavía no ha sido instanciado
+        if(this.comprovarProfesor(profesor))
             this.profesor = profesor;
         else 
             this.profesor = null;
@@ -54,27 +56,29 @@ class Aulas{
         console.log(`Alumnos aprovados = ${contH}`);
         }
     }
+    // Creamos un método que comprueba que la cantidad de alumnos que ha hecho novillos no sea superior a la mitad del máximo de alumnos
+    comprovarDisponibilidadClasse = (alumnos: Alumnos[]): boolean => {
+        let cont = 0;
+        for (let i = 0; i < alumnos.length; i++){
+            if (!alumnos[i].getDisponible)
+                cont++;
+        }
     
-}
-
-const comprovarDisponibilidadClasse = (alumnos: Alumnos[], maxAlumnos: number): boolean => {
-    let cont = 0;
-    for (let i = 0; i < alumnos.length; i++){
-        if (!alumnos[i].getDisponible)
-            cont++;
+        if (cont > this.maxAlumnos/2)
+            return false;
+        else
+            return true;
     }
+    // Creamos un método que comprueba que el profesor imparta la misma materia que el aula y que esté disponible
+    comprovarProfesor = (profesor: Profesores): boolean => {
+        if (profesor.getMateria === this.materia && profesor.getDisponible)
+            return true;
+        else
+            return false
+    }
+    
 
-    if (cont > maxAlumnos/2)
-        return false;
-    else
-        return true;
 }
 
-const comprovarProfesor = (profesor: Profesores, materia: materia): boolean => {
-    if (profesor.getMateria === materia && profesor.getDisponible)
-        return true;
-    else
-        return false
-}
 
 

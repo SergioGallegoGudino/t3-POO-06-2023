@@ -1,5 +1,5 @@
 "use strict";
-// Creamos una clase Profesores que extienda de personas, asignando los atributos de la superclase además del atributo materia
+// Creamos la classe Profesores que extiende de Personas, pasando los atributos de la superclase además del atributo materia
 class Profesores extends Personas {
     // Constructor
     constructor(nombre, edad, sexo, newMateria) {
