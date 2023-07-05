@@ -1,82 +1,87 @@
-const defTiulo: string = "tituloDef"
-const defGenero: string = "generoDef"
-const defComp: string = "compañíaDef"
+const defTiulo: string = ""
+const defGenero: string = ""
+const defComp: string = ""
+const defHoras: number = 10;
 
 class Videojuegos implements Entregable{
-    private _titulo: string;
-    private _horasEstimadas: number;
-    private _entregado: boolean;
-    private _genero: string;
-    private _comp: string;
+    private titulo: string;
+    private horasEstimadas: number;
+    private entregado: boolean;
+    private genero: string;
+    private comp: string;
 
-    constructor(titulo: string = defTiulo, genero: string = defGenero, comp: string = defComp){
-        this._titulo = titulo;
-        this._genero = genero;
-        this._comp = comp;
-        this._entregado = false;
-        this._horasEstimadas = 10;
+    constructor(titulo: string = defTiulo, genero: string = defGenero, comp: string = defComp, horasEstimadas: number = defHoras){
+        this.titulo = titulo;
+        this.genero = genero;
+        this.comp = comp;
+        this.entregado = false;
+        this.horasEstimadas = horasEstimadas;
     }
 
     //---------
     //getters
-    get titulo(): string{
-        return this._titulo;
+    getTitulo(): string{
+        return this.titulo;
     }
 
-    get horasEstimadas(): number{
-        return this._horasEstimadas;
+    getHorasEstimadas(): number{
+        return this.horasEstimadas;
     }
 
-    get genero(): string{
-        return this._genero;
+    getGenero(): string{
+        return this.genero;
     }
 
-    get comp(): string{
-        return this._comp;
+    getComp(): string{
+        return this.comp;
     }
     
     //---------
     //setters
-    set titulo(newTitulo: string){
-        this._titulo = newTitulo;
+    setTitulo(newTitulo: string){
+        this.titulo = newTitulo;
     }
 
-    set horasEstimadas(newhorasEstimadas: number){
-        this._horasEstimadas = newhorasEstimadas;
+    setHorasEstimadas(newhorasEstimadas: number){
+        this.horasEstimadas = newhorasEstimadas;
     }
 
-    set genero(newGenero: string){
-        this._genero = newGenero;
+    setGenero(newGenero: string){
+        this.genero = newGenero;
     }
 
-    set comp(newComp: string){
-        this._comp = newComp;
+    setComp(newComp: string){
+        this.comp = newComp;
     }
 
     //---------
     //metotdo toString
     toString(): string{
-        return(`Videojuego: titulo = ${this._titulo}, numero de horas estimadas = ${this._horasEstimadas}, entregado = ${this._entregado}, genero = ${this._genero}, compañía = ${this._comp}`)
+        return(`Videojuego: titulo = ${this.titulo}, numero de horas estimadas = ${this.horasEstimadas}, entregado = ${this.entregado}, genero = ${this.genero}, compañía = ${this.comp}`)
     }
 
     //---------
     //metodos
     entregar(): void{
-        this._entregado = true;
+        this.entregado = true;
     }
 
     devolver(): void{
-        this._entregado = false;
+        this.entregado = false;
     }
 
     isEntregado(): boolean{
-        return this._entregado;
+        return this.entregado;
     }
 
+    // devuelve:
+    // 1: si this es MAYOR al videojuego pasado por parámetro
+    //-1: si this es MENOR al videojuego pasado por parámetro
+    // 0: si this es IGUAL al videojuego pasado por parámetro
     compareTo(a: Videojuegos): number {
-        if (this._horasEstimadas > a.horasEstimadas)
+        if (this.horasEstimadas > a.horasEstimadas)
             return 1;
-        else if (this._horasEstimadas < a.horasEstimadas)
+        else if (this.horasEstimadas < a.horasEstimadas)
             return -1;
         else
             return 0;

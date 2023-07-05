@@ -1,80 +1,82 @@
-const defCreador: string = "compañíaDef"
+const defCreador: string = "" 
+const defTemporadas: number = 3;
+const defEntregado: boolean = false;
 
 class Series implements Entregable {
-    private _titulo: string;
-    private _numeroTemporadas: number;
-    private _entregado: boolean;
-    private _genero: string;
-    private _creador: string;
+    private titulo: string;
+    private numeroTemporadas: number;
+    private entregado: boolean;
+    private genero: string;
+    private creador: string;
 
-    constructor(titulo: string = defTiulo, genero: string = defGenero, creador: string = defCreador){
-        this._titulo = titulo;
-        this._genero = genero;
-        this._creador = creador;
-        this._numeroTemporadas = 3;
-        this._entregado = false;
+    constructor(titulo: string = defTiulo, creador: string = defCreador){
+        this.titulo = titulo;
+        this.genero = defGenero;
+        this.creador = creador;
+        this.numeroTemporadas = defTemporadas;
+        this.entregado = defEntregado;
     }
 
     //---------
     //getters
-    get titulo(): string{
-        return this._titulo;
+    getTitulo(): string{
+        return this.titulo;
     }
 
-    get numeroTemporadas(): number{
-        return this._numeroTemporadas;
+    getNumeroTemporadas(): number{
+        return this.numeroTemporadas;
     }
 
-    get genero(): string{
-        return this._genero;
+    getGenero(): string{
+        return this.genero;
     }
 
-    get creador(): string{
-        return this._creador;
+    getCreador(): string{
+        return this.creador;
     }
     
     //---------
     //setters
-    set titulo(newTitulo: string){
-        this._titulo = newTitulo;
+    setTitulo(newTitulo: string){
+        this.titulo = newTitulo;
     }
 
-    set numeroTemporadas(newNumeroTemporada: number){
-        this._numeroTemporadas = newNumeroTemporada;
+    setNumeroTemporadas(newNumeroTemporada: number){
+        this.numeroTemporadas = newNumeroTemporada;
     }
 
-    set genero(newGenero: string){
-        this._genero = newGenero;
+    setGenero(newGenero: string){
+        this.genero = newGenero;
     }
 
-    set creador(newCreador: string){
-        this._creador = newCreador;
+    setCreador(newCreador: string){
+        this.creador = newCreador;
     }
 
     //---------
     //metotdo toString
     toString(): string{
-        return(`Serie: titulo = ${this._titulo}, numero de temporadas = ${this._numeroTemporadas}, entregado = ${this._entregado}, genero = ${this._genero}, creador = ${this._creador}`)
+        return(`Serie: titulo = ${this.titulo}, numero de temporadas = ${this.numeroTemporadas}, entregado = ${this.entregado}, genero = ${this.genero}, creador = ${this.creador}`)
     }
 
     //---------
     //metodos
     entregar(): void{
-        this._entregado = true;
+        this.entregado = true;
     }
 
     devolver(): void{
-        this._entregado = false;
+        this.entregado = false;
     }
 
     isEntregado(): boolean{
-        return this._entregado;
+        return this.entregado;
     }
 
     compareTo(a: Series): number {
-        if (this._numeroTemporadas > a.numeroTemporadas)
+        if (this.numeroTemporadas > a.numeroTemporadas)
             return 1;
-        else if (this._numeroTemporadas < a.numeroTemporadas)
+        else if (this.numeroTemporadas < a.numeroTemporadas)
             return -1;
         else
             return 0;
